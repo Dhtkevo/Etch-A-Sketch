@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 const allGridBlocks = document.querySelectorAll('.grid-block');
-
+const sizeButton = document.querySelector('#size');
 
 for (i = 0; i < 32; i++) {
     const block = document.createElement('div');
@@ -17,3 +17,11 @@ const hoverOverBlocks = () => {
         });
     });
 }
+
+const promptButtonSize = () => {
+    sizeButton.addEventListener('click', function () {
+        prompt('Enter desired grid size');
+    })
+}
+
+promptButtonSize();

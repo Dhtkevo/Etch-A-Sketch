@@ -28,3 +28,15 @@ body {
 .change-color:hover {
     background-color: pink ;
 }
+
+#size {
+    border-radius: 15px;
+    border: 1px solid cadetblue;
+    background-color: beige;
+    box-shadow: 2px 4px 14px gray;
+}
+
+#size:hover {
+    background-color: pink;
+    box-shadow: 2px 4px 30px yellow;;
+}
