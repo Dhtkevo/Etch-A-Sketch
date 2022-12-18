@@ -17,11 +17,33 @@ const hoverOverBlocks = () => {
         });
     });
 }
+let userSize;
 
 const promptButtonSize = () => {
     sizeButton.addEventListener('click', function () {
-        prompt('Enter desired grid size');
+        userSize = prompt('Enter desired grid size');
+        return userSize;
     })
 }
 
 promptButtonSize();
+
+const displayNewGrid = () => {
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+
+    if(userSize > 100) {
+        alert('Limit is 100');
+        return null;
+    }
+
+    for (let i = 0; i < userSize; i++) {
+    const block = document.createElement('div');
+    block.classList.add('grid-block');
+    block.classList.add('change-color');
+    container.appendChild(block);
+    }
+}
+
+sizeButton.addEventListener('click', displayNewGrid);
