@@ -12,9 +12,9 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 340px;
     height: 300px;
-    gap: 16px;
+    
 }
 
 .grid-block {
@@ -22,4 +22,9 @@ body {
     border-radius: 5px;
     width: 40px;
     height: 40px;
+    align-self: stretch;
+}
+
+.change-color:hover {
+    background-color: pink ;
 }
